@@ -1,0 +1,71 @@
+<project name="cscl" default="compile-main" basedir=".">
+	<description>check proxy-ip and user-cookie</description>
+	<property name="basic" location="../src/com/" />
+	<property name="conf" location="../config" />
+	<property name="lib" location="../lib" />
+	<property name="runlib" location="../librun" />
+	<property name="hadooplib" location="../lib-hadoop" />
+	<property name="junitlib" location="../lib-junit" />
+	<property name="build" location="../build" />
+
+	<property name="buildPath" value="${build}\GyHadoop" />
+	<property name="jarName" value="GyHadoop.jar" />
+
+	<!-- define an mutil-dir of classpath -->
+	<path id="classpath.pro">
+		<fileset dir="${lib}">
+			<include name="**/*.jar" />
+		</fileset>
+		<fileset dir="${runlib}">
+			<include name="**/*.jar" />
+		</fileset>
+		<fileset dir="${hadooplib}">
+			<include name="**/*.jar" />
+		</fileset>
+		<fileset dir="${junitlib}">
+			<include name="**/*.jar" />
+		</fileset>
+	</path>
+
+	<!-- clear -->
+	<target name="clean">
+		<delete dir="${build}" />
+		<delete file="../${jarName}" />
+	</target>
+
+	<!-- init -->
+	<target name="init" depends="clean">
+		<mkdir dir="${build}" />
+		<mkdir dir="${buildPath}" />
+		<mkdir dir="${buildPath}\lib" />
+	</target>
+
+	<!-- calc_status_comment_list -->
+	<target name="compile-status-comment" depends="init">
+		<javac debug="true" srcdir="${basic}" destdir="${buildPath}">
+			<classpath refid="classpath.pro" />
+		</javac>
+		<move todir="${buildPath}">
+			<fileset dir="${build}">
+				<include name="com/**" />
+			</fileset>
+		</move>
+		<copy todir="${buildPath}\lib">
+			<fileset refid="contextJar" />
+		</copy>
+		<copy todir="${buildPath}">
+			<fileset dir="${conf}">
+				<include name="*" />
+			</fileset>
+		</copy>
+		<jar jarfile="../${jarName}" basedir="${buildPath}" />
+	</target>
+
+	<!-- main -->
+	<target name="compile-main" depends="compile-status-comment" />
+
+	<!-- main-depend-jar -->
+	<fileset id="contextJar" dir="${runlib}">
+		<include name="hbase-0.92.1-cdh4.0.0-security.jar" />
+	</fileset>
+</project>

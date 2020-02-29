@@ -1,0 +1,152 @@
+
+--------------- Map Log
+2014-03-18 17:07:45,278 INFO org.apache.hadoop.util.NativeCodeLoader: Loaded the native-hadoop library
+2014-03-18 17:07:45,432 WARN org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Source name ugi already exists!
+2014-03-18 17:07:45,501 INFO org.apache.hadoop.util.ProcessTree: setsid exited with exit code 0
+2014-03-18 17:07:45,506 INFO org.apache.hadoop.mapred.Task:  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@69b01afa
+2014-03-18 17:07:45,584 INFO org.apache.hadoop.mapred.MapTask: io.sort.mb = 100
+2014-03-18 17:07:45,618 INFO org.apache.hadoop.mapred.MapTask: data buffer = 79691776/99614720
+2014-03-18 17:07:45,618 INFO org.apache.hadoop.mapred.MapTask: record buffer = 262144/327680
+2014-03-18 17:07:45,626 WARN org.apache.hadoop.io.compress.snappy.LoadSnappy: Snappy native library not loaded
+2014-03-18 17:07:45,634 INFO com.mr.SecondSortMR: ---------enter map function flag---------
+2014-03-18 17:07:45,634 INFO com.mr.DefinedPartition: --------enter DefinedPartition flag--------
+2014-03-18 17:07:45,634 INFO com.mr.DefinedPartition: --------out DefinedPartition flag--------
+2014-03-18 17:07:45,634 INFO com.mr.SecondSortMR: ---------out map function flag---------
+2014-03-18 17:07:45,634 INFO com.mr.SecondSortMR: ---------enter map function flag---------
+2014-03-18 17:07:45,635 INFO com.mr.DefinedPartition: --------enter DefinedPartition flag--------
+2014-03-18 17:07:45,635 INFO com.mr.DefinedPartition: --------out DefinedPartition flag--------
+2014-03-18 17:07:45,635 INFO com.mr.SecondSortMR: ---------out map function flag---------
+2014-03-18 17:07:45,635 INFO com.mr.SecondSortMR: ---------enter map function flag---------
+2014-03-18 17:07:45,635 INFO com.mr.DefinedPartition: --------enter DefinedPartition flag--------
+2014-03-18 17:07:45,635 INFO com.mr.DefinedPartition: --------out DefinedPartition flag--------
+2014-03-18 17:07:45,635 INFO com.mr.SecondSortMR: ---------out map function flag---------
+2014-03-18 17:07:45,635 INFO com.mr.SecondSortMR: ---------enter map function flag---------
+2014-03-18 17:07:45,635 INFO com.mr.DefinedPartition: --------enter DefinedPartition flag--------
+2014-03-18 17:07:45,635 INFO com.mr.DefinedPartition: --------out DefinedPartition flag--------
+2014-03-18 17:07:45,635 INFO com.mr.SecondSortMR: ---------out map function flag---------
+2014-03-18 17:07:45,635 INFO com.mr.SecondSortMR: ---------enter map function flag---------
+2014-03-18 17:07:45,636 INFO com.mr.DefinedPartition: --------enter DefinedPartition flag--------
+2014-03-18 17:07:45,636 INFO com.mr.DefinedPartition: --------out DefinedPartition flag--------
+2014-03-18 17:07:45,636 INFO com.mr.SecondSortMR: ---------out map function flag---------
+2014-03-18 17:07:45,636 INFO com.mr.SecondSortMR: ---------enter map function flag---------
+2014-03-18 17:07:45,636 INFO com.mr.DefinedPartition: --------enter DefinedPartition flag--------
+2014-03-18 17:07:45,636 INFO com.mr.DefinedPartition: --------out DefinedPartition flag--------
+2014-03-18 17:07:45,636 INFO com.mr.SecondSortMR: ---------out map function flag---------
+2014-03-18 17:07:45,636 INFO com.mr.SecondSortMR: ---------enter map function flag---------
+2014-03-18 17:07:45,636 INFO com.mr.DefinedPartition: --------enter DefinedPartition flag--------
+2014-03-18 17:07:45,636 INFO com.mr.DefinedPartition: --------out DefinedPartition flag--------
+2014-03-18 17:07:45,636 INFO com.mr.SecondSortMR: ---------out map function flag---------
+2014-03-18 17:07:45,636 INFO com.mr.SecondSortMR: ---------enter map function flag---------
+2014-03-18 17:07:45,637 INFO com.mr.DefinedPartition: --------enter DefinedPartition flag--------
+2014-03-18 17:07:45,637 INFO com.mr.DefinedPartition: --------out DefinedPartition flag--------
+2014-03-18 17:07:45,637 INFO com.mr.SecondSortMR: ---------out map function flag---------
+2014-03-18 17:07:45,637 INFO org.apache.hadoop.mapred.MapTask: Starting flush of map output
+2014-03-18 17:07:45,651 INFO com.mr.DefinedComparator: ---------enter DefinedComparator flag---------
+2014-03-18 17:07:45,651 INFO com.mr.DefinedComparator: ---------out DefinedComparator flag---------
+2014-03-18 17:07:45,651 INFO com.mr.DefinedComparator: ---------enter DefinedComparator flag---------
+2014-03-18 17:07:45,651 INFO com.mr.DefinedComparator: ---------out DefinedComparator flag---------
+2014-03-18 17:07:45,651 INFO com.mr.DefinedComparator: ---------enter DefinedComparator flag---------
+2014-03-18 17:07:45,651 INFO com.mr.DefinedComparator: ---------out DefinedComparator flag---------
+2014-03-18 17:07:45,651 INFO com.mr.DefinedComparator: ---------enter DefinedComparator flag---------
+2014-03-18 17:07:45,651 INFO com.mr.DefinedComparator: ---------out DefinedComparator flag---------
+2014-03-18 17:07:45,651 INFO com.mr.DefinedComparator: ---------enter DefinedComparator flag---------
+2014-03-18 17:07:45,651 INFO com.mr.DefinedComparator: ---------out DefinedComparator flag---------
+2014-03-18 17:07:45,652 INFO com.mr.DefinedComparator: ---------enter DefinedComparator flag---------
+2014-03-18 17:07:45,652 INFO com.mr.DefinedComparator: ---------out DefinedComparator flag---------
+2014-03-18 17:07:45,652 INFO com.mr.DefinedComparator: ---------enter DefinedComparator flag---------
+2014-03-18 17:07:45,652 INFO com.mr.DefinedComparator: ---------out DefinedComparator flag---------
+2014-03-18 17:07:45,652 INFO com.mr.DefinedComparator: ---------enter DefinedComparator flag---------
+2014-03-18 17:07:45,652 INFO com.mr.DefinedComparator: ---------out DefinedComparator flag---------
+2014-03-18 17:07:45,652 INFO com.mr.DefinedComparator: ---------enter DefinedComparator flag---------
+2014-03-18 17:07:45,652 INFO com.mr.DefinedComparator: ---------out DefinedComparator flag---------
+2014-03-18 17:07:45,652 INFO com.mr.DefinedComparator: ---------enter DefinedComparator flag---------
+2014-03-18 17:07:45,652 INFO com.mr.DefinedComparator: ---------out DefinedComparator flag---------
+2014-03-18 17:07:45,652 INFO com.mr.DefinedComparator: ---------enter DefinedComparator flag---------
+2014-03-18 17:07:45,652 INFO com.mr.DefinedComparator: ---------out DefinedComparator flag---------
+2014-03-18 17:07:45,652 INFO com.mr.DefinedComparator: ---------enter DefinedComparator flag---------
+2014-03-18 17:07:45,652 INFO com.mr.DefinedComparator: ---------out DefinedComparator flag---------
+2014-03-18 17:07:45,652 INFO com.mr.DefinedComparator: ---------enter DefinedComparator flag---------
+2014-03-18 17:07:45,652 INFO com.mr.DefinedComparator: ---------out DefinedComparator flag---------
+2014-03-18 17:07:45,656 INFO org.apache.hadoop.mapred.MapTask: Finished spill 0
+2014-03-18 17:07:45,661 INFO org.apache.hadoop.mapred.Task: Task:attempt_201312292019_13586_m_000000_0 is done. And is in the process of commiting
+2014-03-18 17:07:48,494 INFO org.apache.hadoop.mapred.Task: Task 'attempt_201312292019_13586_m_000000_0' done.
+2014-03-18 17:07:48,526 INFO org.apache.hadoop.mapred.TaskLogsTruncater: Initializing logs' truncater with mapRetainSize=-1 and reduceRetainSize=-1
+2014-03-18 17:07:48,548 INFO org.apache.hadoop.io.nativeio.NativeIO: Initialized cache for UID to User mapping with a cache timeout of 14400 seconds.
+2014-03-18 17:07:48,548 INFO org.apache.hadoop.io.nativeio.NativeIO: Got UserName hadoop for UID 1000 from the native implementation
+
+
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+--------------- Reduce Log
+
+2014-03-18 17:07:51,266 INFO org.apache.hadoop.util.NativeCodeLoader: Loaded the native-hadoop library
+2014-03-18 17:07:51,418 WARN org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Source name ugi already exists!
+2014-03-18 17:07:51,486 INFO org.apache.hadoop.util.ProcessTree: setsid exited with exit code 0
+2014-03-18 17:07:51,491 INFO org.apache.hadoop.mapred.Task:  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@28bb494b
+2014-03-18 17:07:51,537 INFO org.apache.hadoop.mapred.ReduceTask: ShuffleRamManager: MemoryLimit=195749472, MaxSingleShuffleLimit=48937368
+2014-03-18 17:07:51,542 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201312292019_13586_r_000000_0 Thread started: Thread for merging on-disk files
+2014-03-18 17:07:51,542 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201312292019_13586_r_000000_0 Thread started: Thread for merging in memory files
+2014-03-18 17:07:51,542 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201312292019_13586_r_000000_0 Thread waiting: Thread for merging on-disk files
+2014-03-18 17:07:51,543 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201312292019_13586_r_000000_0 Need another 1 map output(s) where 0 is already in progress
+2014-03-18 17:07:51,543 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201312292019_13586_r_000000_0 Thread started: Thread for polling Map Completion Events
+2014-03-18 17:07:51,543 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201312292019_13586_r_000000_0 Scheduled 0 outputs (0 slow hosts and0 dup hosts)
+2014-03-18 17:07:56,544 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201312292019_13586_r_000000_0 Scheduled 1 outputs (0 slow hosts and0 dup hosts)
+2014-03-18 17:07:57,553 INFO org.apache.hadoop.mapred.ReduceTask: GetMapEventsThread exiting
+2014-03-18 17:07:57,553 INFO org.apache.hadoop.mapred.ReduceTask: getMapsEventsThread joined.
+2014-03-18 17:07:57,553 INFO org.apache.hadoop.mapred.ReduceTask: Closed ram manager
+2014-03-18 17:07:57,553 INFO org.apache.hadoop.mapred.ReduceTask: Interleaved on-disk merge complete: 0 files left.
+2014-03-18 17:07:57,553 INFO org.apache.hadoop.mapred.ReduceTask: In-memory merge complete: 1 files left.
+2014-03-18 17:07:57,577 INFO org.apache.hadoop.mapred.Merger: Merging 1 sorted segments
+2014-03-18 17:07:57,577 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 1 segments left of total size: 130 bytes
+2014-03-18 17:07:57,583 INFO org.apache.hadoop.mapred.ReduceTask: Merged 1 segments, 130 bytes to disk to satisfy reduce memory limit
+2014-03-18 17:07:57,584 INFO org.apache.hadoop.mapred.ReduceTask: Merging 1 files, 134 bytes from disk
+2014-03-18 17:07:57,584 INFO org.apache.hadoop.mapred.ReduceTask: Merging 0 segments, 0 bytes from memory into reduce
+2014-03-18 17:07:57,584 INFO org.apache.hadoop.mapred.Merger: Merging 1 sorted segments
+2014-03-18 17:07:57,586 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 1 segments left of total size: 130 bytes
+2014-03-18 17:07:57,599 INFO com.mr.DefinedGroupSort: -------enter DefinedGroupSort flag-------
+2014-03-18 17:07:57,599 INFO com.mr.DefinedGroupSort: -------Grouping result:0-------
+2014-03-18 17:07:57,599 INFO com.mr.DefinedGroupSort: -------out DefinedGroupSort flag-------
+2014-03-18 17:07:57,599 INFO com.mr.DefinedGroupSort: -------enter DefinedGroupSort flag-------
+2014-03-18 17:07:57,599 INFO com.mr.DefinedGroupSort: -------Grouping result:-1-------
+2014-03-18 17:07:57,599 INFO com.mr.DefinedGroupSort: -------out DefinedGroupSort flag-------
+2014-03-18 17:07:57,600 INFO com.mr.SecondSortMR: ---------enter reduce function flag---------
+2014-03-18 17:07:57,600 INFO com.mr.SecondSortMR: reduce Input data:{[sort1,2],[1,2]}
+2014-03-18 17:07:57,600 INFO com.mr.SecondSortMR: ---------out reduce function flag---------
+
+
+2014-03-18 17:07:57,600 INFO com.mr.DefinedGroupSort: -------enter DefinedGroupSort flag-------
+2014-03-18 17:07:57,600 INFO com.mr.DefinedGroupSort: -------Grouping result:0-------
+2014-03-18 17:07:57,600 INFO com.mr.DefinedGroupSort: -------out DefinedGroupSort flag-------
+2014-03-18 17:07:57,600 INFO com.mr.DefinedGroupSort: -------enter DefinedGroupSort flag-------
+2014-03-18 17:07:57,600 INFO com.mr.DefinedGroupSort: -------Grouping result:0-------
+2014-03-18 17:07:57,600 INFO com.mr.DefinedGroupSort: -------out DefinedGroupSort flag-------
+2014-03-18 17:07:57,601 INFO com.mr.DefinedGroupSort: -------enter DefinedGroupSort flag-------
+2014-03-18 17:07:57,601 INFO com.mr.DefinedGroupSort: -------Grouping result:-4-------
+2014-03-18 17:07:57,601 INFO com.mr.DefinedGroupSort: -------out DefinedGroupSort flag-------
+2014-03-18 17:07:57,601 INFO com.mr.SecondSortMR: ---------enter reduce function flag---------
+2014-03-18 17:07:57,601 INFO com.mr.SecondSortMR: reduce Input data:{[sort2,77],[3,54,77]}
+2014-03-18 17:07:57,601 INFO com.mr.SecondSortMR: ---------out reduce function flag---------
+2014-03-18 17:07:57,601 INFO com.mr.DefinedGroupSort: -------enter DefinedGroupSort flag-------
+2014-03-18 17:07:57,601 INFO com.mr.DefinedGroupSort: -------Grouping result:0-------
+2014-03-18 17:07:57,601 INFO com.mr.DefinedGroupSort: -------out DefinedGroupSort flag-------
+2014-03-18 17:07:57,601 INFO com.mr.DefinedGroupSort: -------enter DefinedGroupSort flag-------
+2014-03-18 17:07:57,601 INFO com.mr.DefinedGroupSort: -------Grouping result:0-------
+2014-03-18 17:07:57,601 INFO com.mr.DefinedGroupSort: -------out DefinedGroupSort flag-------
+2014-03-18 17:07:57,601 INFO com.mr.SecondSortMR: ---------enter reduce function flag---------
+2014-03-18 17:07:57,601 INFO com.mr.SecondSortMR: reduce Input data:{[sort6,221],[20,22,221]}
+2014-03-18 17:07:57,601 INFO com.mr.SecondSortMR: ---------out reduce function flag---------
+2014-03-18 17:07:57,641 INFO org.apache.hadoop.mapred.Task: Task:attempt_201312292019_13586_r_000000_0 is done. And is in the process of commiting
+2014-03-18 17:08:00,668 INFO org.apache.hadoop.mapred.Task: Task attempt_201312292019_13586_r_000000_0 is allowed to commit now
+2014-03-18 17:08:00,682 INFO org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter: Saved output of task 'attempt_201312292019_13586_r_000000_0' to /user/hadoop/z.zeng/output23
+2014-03-18 17:08:03,593 INFO org.apache.hadoop.mapred.Task: Task 'attempt_201312292019_13586_r_000000_0' done.
+2014-03-18 17:08:03,596 INFO org.apache.hadoop.mapred.TaskLogsTruncater: Initializing logs' truncater with mapRetainSize=-1 and reduceRetainSize=-1
+2014-03-18 17:08:03,615 INFO org.apache.hadoop.io.nativeio.NativeIO: Initialized cache for UID to User mapping with a cache timeout of 14400 seconds.
+2014-03-18 17:08:03,615 INFO org.apache.hadoop.io.nativeio.NativeIO: Got UserName hadoop for UID 1000 from the native implementation
+
+

@@ -1,0 +1,30 @@
+{
+	"namespace": "com.gy.avro.login",
+	"protocol": "UserRpc",
+	"types": [
+		{
+			"name": "UserRequest",
+			"type": "record",
+            "fields": [
+				{"name": "name", "type": "string"},
+				{"name": "password", "type": "string"},
+				{"name": "devicetoken", "type": "string"}
+            ]
+       },
+       {
+            "name": "UserResponse",
+            "type": "record",
+            "fields": [
+				{"name": "name", "type": "string"},
+				{"name": "loginToken", "type": "string"}
+            ]
+       }
+	],
+
+	"messages": {
+		"send": {
+			"request": [{"name": "request", "type": "UserRequest"}],
+			"response": "UserResponse"
+		}
+	}
+}
