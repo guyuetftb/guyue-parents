@@ -59,10 +59,10 @@ public class ESUtils {
             }
         }
 
-        clusterName = properties.getProperty("missfresh.cloud.es.hivelog.clustername");
-        nodeHostPort = properties.getProperty("missfresh.cloud.es.hivelog.hostPorts");
-        index = properties.getProperty("missfresh.cloud.es.hivelog.index");
-        type = properties.getProperty("missfresh.cloud.es.hivelog.type");
+        clusterName = properties.getProperty("guyuecloud.es.hivelog.clustername");
+        nodeHostPort = properties.getProperty("guyuecloud.es.hivelog.hostPorts");
+        index = properties.getProperty("guyuecloud.es.hivelog.index");
+        type = properties.getProperty("guyuecloud.es.hivelog.type");
 
         if (null == clusterName || clusterName.isEmpty()) {
             logger.error(" The name of cluster is null or empty. ");

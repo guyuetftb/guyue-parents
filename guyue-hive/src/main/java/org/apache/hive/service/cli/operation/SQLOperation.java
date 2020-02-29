@@ -253,7 +253,7 @@ public class SQLOperation extends ExecuteStatementOperation {
             /**
              *
              * TODO 2018-07-10 by lipeng
-             * hive.mryxblg.exec.mode=explain
+             * hive.guyue.exec.mode=explain
              *
              */
             LOG.info(LOG_GY_PREFIX + " \t 3-1 parpare(QueryState) driver = " + driver);
@@ -261,9 +261,9 @@ public class SQLOperation extends ExecuteStatementOperation {
             LOG.info(LOG_GY_PREFIX + " \t 3-3 parpare(QueryState) driver.getPlan().getFetchTask = " + driver.getPlan().getFetchTask());
             LOG.info(LOG_GY_PREFIX + " \t 3-4 parpare(QueryState) queryStatus = " + queryState);
             LOG.info(LOG_GY_PREFIX + " \t 3-5 parpare(QueryState) queryStatus.getConf = " + queryState.getConf());
-            LOG.info(LOG_GY_PREFIX + " \t 3-6 parpare(QueryState) MRYXBLG_EXEC_MODEL = " + queryState.getConf().getVar(HiveConf.ConfVars.MRYXBLG_EXEC_MODEL));
+            LOG.info(LOG_GY_PREFIX + " \t 3-6 parpare(QueryState) GUYUE_EXEC_MODEL = " + queryState.getConf().getVar(HiveConf.ConfVars.GUYUE_EXEC_MODEL));
             LOG.info(LOG_GY_PREFIX + " \t 3-7 parpare(QueryState) resultSchema = " + resultSchema);
-            if ("explain".equalsIgnoreCase(queryState.getConf().getVar(HiveConf.ConfVars.MRYXBLG_EXEC_MODEL))) {
+            if ("explain".equalsIgnoreCase(queryState.getConf().getVar(HiveConf.ConfVars.GUYUE_EXEC_MODEL))) {
                 /**
                  * TODO 2018-07-11 by lipeng
                  * 通过判断 是否有 FetchTask 来判断是否有结果输出。
@@ -555,7 +555,7 @@ public class SQLOperation extends ExecuteStatementOperation {
         LOG.info(LOG_GY_PREFIX + " 1 \t getNextRowSet(FetchOrientation, maxRows) driver.getSchema = " + driver.getSchema());
 
         // TODO testing
-        if ("explain".equalsIgnoreCase(queryState.getConf().getVar(HiveConf.ConfVars.MRYXBLG_EXEC_MODEL))) {
+        if ("explain".equalsIgnoreCase(queryState.getConf().getVar(HiveConf.ConfVars.GUYUE_EXEC_MODEL))) {
             LOG.info(LOG_GY_PREFIX + " 2 \t getNextRowSet(FetchOrientation, maxRows) OPERATION = " + queryState.getHiveOperation());
             /**
              * TODO 2018-07-11 by lipeng
@@ -652,7 +652,7 @@ public class SQLOperation extends ExecuteStatementOperation {
         /**
          * 2018-07-11
          */
-        if ("explain".equalsIgnoreCase(queryState.getConf().getVar(HiveConf.ConfVars.MRYXBLG_EXEC_MODEL))) {
+        if ("explain".equalsIgnoreCase(queryState.getConf().getVar(HiveConf.ConfVars.GUYUE_EXEC_MODEL))) {
             rs = prepareFromRow(rows, rowSet);
             return rs;
         }

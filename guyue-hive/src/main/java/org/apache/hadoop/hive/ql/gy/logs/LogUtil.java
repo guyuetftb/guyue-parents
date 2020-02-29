@@ -36,8 +36,8 @@ import java.util.Map;
 
 public class LogUtil {
 
-    private static final Logger MRYXBLG_COMMAND_LOGGER      = LoggerFactory.getLogger("MRYXBLG_COMMAND_LOGGER");
-    private static final Logger MRYXBLG_COMMAND_AVRO_LOGGER = LoggerFactory.getLogger("MRYXBLG_COMMAND_AVRO_LOGGER");
+    private static final Logger GUYUE_COMMAND_LOGGER      = LoggerFactory.getLogger("GUYUE_COMMAND_LOGGER");
+    private static final Logger GUYUE_COMMAND_AVRO_LOGGER = LoggerFactory.getLogger("GUYUE_COMMAND_AVRO_LOGGER");
     private static final Logger LOG                         = LoggerFactory.getLogger(LogUtil.class);
 
     /**
@@ -62,11 +62,11 @@ public class LogUtil {
         SessionState ss = SessionState.get();
         HiveConf hiveConf = ss.getConf();
 
-        LOG.warn(" 000 logUserAction() Vars-userName = " + hiveConf.getVar(HiveConf.ConfVars.MRYXBLG_USER));
-        LOG.warn(" 000 logUserAction() auth = " + hiveConf.getVar(HiveConf.ConfVars.MRYXBLG_AUTHORIZATION_ENABLED));
-        LOG.warn(" 000 logUserAction() MRYXBLG_COMMAND_MONITORING = " + HiveConf.getBoolVar(hiveConf, HiveConf.ConfVars.MRYXBLG_COMMAND_MONITORING));
+        LOG.warn(" 000 logUserAction() Vars-userName = " + hiveConf.getVar(HiveConf.ConfVars.GUYUE_USER));
+        LOG.warn(" 000 logUserAction() auth = " + hiveConf.getVar(HiveConf.ConfVars.GUYUE_AUTHORIZATION_ENABLED));
+        LOG.warn(" 000 logUserAction() GUYUE_COMMAND_MONITORING = " + HiveConf.getBoolVar(hiveConf, HiveConf.ConfVars.GUYUE_COMMAND_MONITORING));
 
-        if (HiveConf.getBoolVar(hiveConf, HiveConf.ConfVars.MRYXBLG_COMMAND_MONITORING)) {
+        if (HiveConf.getBoolVar(hiveConf, HiveConf.ConfVars.GUYUE_COMMAND_MONITORING)) {
             try {
                 Gson gson = new GsonBuilder().serializeNulls().create();
                 LogBean logBean = new LogBean();
@@ -97,7 +97,7 @@ public class LogUtil {
                 logBean.setCommandClean(commandClean);
                 logBean.setQueryString(hiveConf.getQueryString());
                 logBean.setCurrentTime(String.valueOf(System.currentTimeMillis()));
-                logBean.setBlgUserName(HiveConf.getVar(conf, HiveConf.ConfVars.MRYXBLG_USER, "null"));
+                logBean.setBlgUserName(HiveConf.getVar(conf, HiveConf.ConfVars.GUYUE_USER, "null"));
                 logBean.setUserName(StringUtils.isEmpty(ss.getUserName()) ? hiveConf.getUser() : ss.getUserName());
                 logBean.setRet(String.valueOf(ret));
                 if (null != queryState) {
@@ -109,26 +109,26 @@ public class LogUtil {
                 logBean.setProcessorName((null != processor ? processor.getClass().getName() : null));
                 logBean.setLastCommand(ss.getLastCommand());
 
-                logBean.setMryxblgExecModel(String.valueOf(HiveConf.getVar(conf,
-                                                                           HiveConf.ConfVars.MRYXBLG_EXEC_MODEL)));
-                logBean.setMryxblgAuthorizationEnabled(String.valueOf(HiveConf.getBoolVar(conf,
-                                                                                          HiveConf.ConfVars.MRYXBLG_AUTHORIZATION_ENABLED)));
-                logBean.setMryxblgCommandMonitoring(String.valueOf(HiveConf.getBoolVar(conf,
-                                                                                       HiveConf.ConfVars.MRYXBLG_COMMAND_MONITORING)));
+                logBean.setGuyueExecModel(String.valueOf(HiveConf.getVar(conf,
+                                                                           HiveConf.ConfVars.GUYUE_EXEC_MODEL)));
+                logBean.setGuyueAuthorizationEnabled(String.valueOf(HiveConf.getBoolVar(conf,
+                                                                                          HiveConf.ConfVars.GUYUE_AUTHORIZATION_ENABLED)));
+                logBean.setGuyueCommandMonitoring(String.valueOf(HiveConf.getBoolVar(conf,
+                                                                                       HiveConf.ConfVars.GUYUE_COMMAND_MONITORING)));
 
                 String gsonString = gson.toJson(logBean, LogBean.class);
                 LOG.warn(" ---------------------------->   111");
-                MRYXBLG_COMMAND_LOGGER.warn(gsonString);
+                GUYUE_COMMAND_LOGGER.warn(gsonString);
                 LOG.warn(" ---------------------------->   222");
-                MRYXBLG_COMMAND_AVRO_LOGGER.warn(gsonString);
+                GUYUE_COMMAND_AVRO_LOGGER.warn(gsonString);
                 LOG.warn(" ---------------------------->   333");
             } catch (Exception e) {
-                MRYXBLG_COMMAND_LOGGER.error(" Writern Log Error : ", e.getStackTrace());
-                MRYXBLG_COMMAND_AVRO_LOGGER.error(" Writern Log Error : ", e.getStackTrace());
+                GUYUE_COMMAND_LOGGER.error(" Writern Log Error : ", e.getStackTrace());
+                GUYUE_COMMAND_AVRO_LOGGER.error(" Writern Log Error : ", e.getStackTrace());
                 LOG.error(" Writern Log Error : ", e.getStackTrace());
             }
         }
-        LOG.warn(" 999 logUserAction() MRYXBLG_COMMAND_MONITORING = " + HiveConf.getBoolVar(hiveConf, HiveConf.ConfVars.MRYXBLG_COMMAND_MONITORING));
+        LOG.warn(" 999 logUserAction() GUYUE_COMMAND_MONITORING = " + HiveConf.getBoolVar(hiveConf, HiveConf.ConfVars.GUYUE_COMMAND_MONITORING));
     }
 
     /**
@@ -365,7 +365,7 @@ public class LogUtil {
          * -----------------------------------------------------------------
          */
         LOG.info("-------------------------------> doExplain() -------------------------------------------------------------------- ");
-        LOG.info("-------------------------------> doExplain() MRYXBLG_EXEC_MODEL_EXPLAIN_RESULT 11111 = " + queryState.getConf().getVar(HiveConf.ConfVars.MRYXBLG_EXEC_MODEL_EXPLAIN_RESULT));
+        LOG.info("-------------------------------> doExplain() GUYUE_EXEC_MODEL_EXPLAIN_RESULT 11111 = " + queryState.getConf().getVar(HiveConf.ConfVars.GUYUE_EXEC_MODEL_EXPLAIN_RESULT));
         LOG.info("-------------------------------> doExplain() -------------------------------------------------------------------- ");
         LOG.info("");
         LOG.info("");
@@ -374,8 +374,8 @@ public class LogUtil {
         LOG.info("");
         LOG.info("");
         LOG.info("-------------------------------> doExplain() -------------------------------------------------------------------- ");
-        queryState.getConf().setVar(HiveConf.ConfVars.MRYXBLG_EXEC_MODEL_EXPLAIN_RESULT, result.toString());
-        LOG.info("-------------------------------> doExplain() MRYXBLG_EXEC_MODEL_EXPLAIN_RESULT 22222 = " + queryState.getConf().getVar(HiveConf.ConfVars.MRYXBLG_EXEC_MODEL_EXPLAIN_RESULT));
+        queryState.getConf().setVar(HiveConf.ConfVars.GUYUE_EXEC_MODEL_EXPLAIN_RESULT, result.toString());
+        LOG.info("-------------------------------> doExplain() GUYUE_EXEC_MODEL_EXPLAIN_RESULT 22222 = " + queryState.getConf().getVar(HiveConf.ConfVars.GUYUE_EXEC_MODEL_EXPLAIN_RESULT));
         LOG.info("-------------------------------> doExplain() -------------------------------------------------------------------- ");
 
         // LOG.warn(" explain-content = " + result.toString());

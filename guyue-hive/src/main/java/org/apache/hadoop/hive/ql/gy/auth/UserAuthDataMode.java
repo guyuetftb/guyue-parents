@@ -45,12 +45,12 @@ public class UserAuthDataMode {
     private void createConn() throws Exception {
         Class.forName("com.mysql.jdbc.Driver");
 
-        String dbURL = HiveConf.getVar(this.conf, HiveConf.ConfVars.MRYXBLG_HIVESERVER_URL);
-        String dbUserName = HiveConf.getVar(this.conf, HiveConf.ConfVars.MRYXBLG_HIVESERVER_USER);
-        String dbPassword = HiveConf.getVar(this.conf, HiveConf.ConfVars.MRYXBLG_HIVESERVER_PASSWORD);
-        LOG.info(" db_url = " + HiveConf.ConfVars.MRYXBLG_HIVESERVER_URL + " = " + dbURL);
-        LOG.info(" db_userName = " + HiveConf.ConfVars.MRYXBLG_HIVESERVER_USER + " = " + dbUserName);
-        LOG.info(" db_Password = " + HiveConf.ConfVars.MRYXBLG_HIVESERVER_PASSWORD + " = " + dbPassword);
+        String dbURL = HiveConf.getVar(this.conf, HiveConf.ConfVars.GUYUE_HIVESERVER_URL);
+        String dbUserName = HiveConf.getVar(this.conf, HiveConf.ConfVars.GUYUE_HIVESERVER_USER);
+        String dbPassword = HiveConf.getVar(this.conf, HiveConf.ConfVars.GUYUE_HIVESERVER_PASSWORD);
+        LOG.info(" db_url = " + HiveConf.ConfVars.GUYUE_HIVESERVER_URL + " = " + dbURL);
+        LOG.info(" db_userName = " + HiveConf.ConfVars.GUYUE_HIVESERVER_USER + " = " + dbUserName);
+        LOG.info(" db_Password = " + HiveConf.ConfVars.GUYUE_HIVESERVER_PASSWORD + " = " + dbPassword);
         this.conn = DriverManager.getConnection(dbURL, dbUserName, dbPassword);
     }
 

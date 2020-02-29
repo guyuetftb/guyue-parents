@@ -207,8 +207,8 @@ public abstract class Task<T extends Serializable> implements Serializable, Node
             }
             LOG.info(LOG_GY_PREFIX + " \t 0 status = " + this.taskState);
             LOG.info(LOG_GY_PREFIX + " \t 1 session_id = " + ss.getSessionId());
-            LOG.info(LOG_GY_PREFIX + " \t 2 user_name = " + ss.getConf().getVar(HiveConf.ConfVars.MRYXBLG_USER));
-            LOG.info(LOG_GY_PREFIX + " \t 3 password = " + ss.getConf().getVar(HiveConf.ConfVars.MRYXBLG_PASSWORD));
+            LOG.info(LOG_GY_PREFIX + " \t 2 user_name = " + ss.getConf().getVar(HiveConf.ConfVars.GUYUE_USER));
+            LOG.info(LOG_GY_PREFIX + " \t 3 password = " + ss.getConf().getVar(HiveConf.ConfVars.GUYUE_PASSWORD));
 
             int retval = execute(driverContext);
 

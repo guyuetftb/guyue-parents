@@ -108,7 +108,7 @@ public class Driver implements CommandProcessor {
     private String password = "";
 
     private static final Logger    LOG                    = LoggerFactory.getLogger(CLASS_NAME);
-    private static final Logger    MRYXBLG_COMMAND_LOGGER = LoggerFactory.getLogger("MRYXBLG_COMMAND_LOGGER");
+    private static final Logger    GUYUE_COMMAND_LOGGER = LoggerFactory.getLogger("GUYUE_COMMAND_LOGGER");
     private static final LogHelper console                = new LogHelper(LOG);
     static final         int       SHUTDOWN_HOOK_PRIORITY = 0;
     private              Runnable  shutdownRunner         = null;
@@ -372,8 +372,8 @@ public class Driver implements CommandProcessor {
                        boolean resetTaskIds,
                        boolean deferClose) {
         LOG.info(LOG_GY_PREFIX + LOG_GY_BEGIN + " compile(String,boolean,boolean) ");
-        LOG.info(LOG_GY_PREFIX + " \t ##### compile(String,boolean,boolean) command = " + command + ", exec.model = " + conf.getVar(ConfVars.MRYXBLG_EXEC_MODEL));
-        LOG.info(LOG_GY_PREFIX + " \t ##### compile(String,boolean,boolean) command = " + command + ", command.monitoring = " + conf.getVar(ConfVars.MRYXBLG_COMMAND_MONITORING));
+        LOG.info(LOG_GY_PREFIX + " \t ##### compile(String,boolean,boolean) command = " + command + ", exec.model = " + conf.getVar(ConfVars.GUYUE_EXEC_MODEL));
+        LOG.info(LOG_GY_PREFIX + " \t ##### compile(String,boolean,boolean) command = " + command + ", command.monitoring = " + conf.getVar(ConfVars.GUYUE_COMMAND_MONITORING));
         LOG.info(LOG_GY_PREFIX + " \t ##### ");
         LOG.info(LOG_GY_PREFIX + " \t ##### ");
         LOG.info(LOG_GY_PREFIX + " \t ##### ");
@@ -581,28 +581,28 @@ public class Driver implements CommandProcessor {
                 // 2018-05-18 by lipeng
                 LogUtil.logUserAction("1", this.conf, this, queryState, command, "Local_Mode", "runInternal", 0);
             } catch (Exception e) {
-                MRYXBLG_COMMAND_LOGGER.error(" Writern Log Error : ", e.getStackTrace());
+                GUYUE_COMMAND_LOGGER.error(" Writern Log Error : ", e.getStackTrace());
                 LOG.error(" Writern Log Error : ", e.getStackTrace());
             }
 
             // 2018-05-08 by lipeng. don't run sql, output explain only.
-            if ("explain".equalsIgnoreCase(HiveConf.getVar(this.conf, ConfVars.MRYXBLG_EXEC_MODEL))) {
+            if ("explain".equalsIgnoreCase(HiveConf.getVar(this.conf, ConfVars.GUYUE_EXEC_MODEL))) {
                 // TODO 2018-07-10
                 // do Explain
                 LogUtil.doExplain(queryState, sem, command);
                 return 0;
             }
 
-            // TODO 2018-05-08 by lipeng. Mryx Auth Properties.
-            if (HiveConf.getBoolVar(this.conf, ConfVars.MRYXBLG_AUTHORIZATION_ENABLED)) {
+            // TODO 2018-05-08 by lipeng. guyue Auth Properties.
+            if (HiveConf.getBoolVar(this.conf, ConfVars.GUYUE_AUTHORIZATION_ENABLED)) {
                 try {
                     // TODO 2018-07-10
                     doAuthorizationExtend(command, sem);
                 } catch (AuthorizationException authExp) {
-                    errorMessage = "FAILED:MryxBlg Authorization failed:" + authExp.getMessage()
-                            + " Please contact blg-team-dataman@missfresh.cn for your information.";
-                    console.printError("MryxBlg Authorization failed:" + authExp.getMessage()
-                                               + " Please contact blg-team-dataman@missfresh.cn for your information.");
+                    errorMessage = "FAILED:Guyue Authorization failed:" + authExp.getMessage()
+                            + " Please contact blg-team-dataman@guyuecn for your information.";
+                    console.printError("Guyue Authorization failed:" + authExp.getMessage()
+                                               + " Please contact blg-team-dataman@guyuecn for your information.");
                     return 403;
                 }
             }
@@ -1344,8 +1344,8 @@ public class Driver implements CommandProcessor {
                          + ", alreadyCompiled = " + alreadyCompiled);
 
         // 2018-05-02 by lipeng read auth username and pwd
-        this.username = HiveConf.getVar(conf, ConfVars.MRYXBLG_USER);
-        this.password = HiveConf.getVar(conf, ConfVars.MRYXBLG_PASSWORD);
+        this.username = HiveConf.getVar(conf, ConfVars.GUYUE_USER);
+        this.password = HiveConf.getVar(conf, ConfVars.GUYUE_PASSWORD);
 
         LOG.info(LOG_GY_PREFIX + " \t run(String, boolean) run-3  Process Begining ..............runInternal().....................");
         CommandProcessorResponse cpr = runInternal(command, alreadyCompiled);
@@ -1421,10 +1421,10 @@ public class Driver implements CommandProcessor {
         // 获取用户权限信息
         UserAuthDataMode ua = null;
         String userName = null;
-        boolean logSwitch = this.conf.getBoolVar(ConfVars.MRYXBLG_EXEC_LOG_SWTICH);
+        boolean logSwitch = this.conf.getBoolVar(ConfVars.GUYUE_EXEC_LOG_SWTICH);
         try {
             userName = StringUtils.isEmpty(SessionState.get().getUserName()) ? this.conf.getUser() : SessionState.get().getUserName();
-            String userProxy = this.conf.getVar(ConfVars.MRYXBLG_AUTHORIZATION_USER_PROXY).trim();
+            String userProxy = this.conf.getVar(ConfVars.GUYUE_AUTHORIZATION_USER_PROXY).trim();
             ua = new UserAuthDataMode(StringUtils.isEmpty(userProxy) ? userName : userProxy, this.password, this.conf);
             ua.run();
         } catch (Exception e) {
@@ -1766,8 +1766,8 @@ public class Driver implements CommandProcessor {
 
         LOG.info(LOG_GY_PREFIX + " 000 runInternal(String,Boolean) username = " + this.username);
         LOG.info(LOG_GY_PREFIX + " 000 runInternal(String,Boolean) userName = " + this.userName);
-        LOG.info(LOG_GY_PREFIX + " 000 runInternal(String,Boolean) Vars-userName = " + this.conf.getVar(ConfVars.MRYXBLG_USER));
-        LOG.info(LOG_GY_PREFIX + " 000 runInternal(String,Boolean) auth = " + this.conf.getVar(ConfVars.MRYXBLG_AUTHORIZATION_ENABLED));
+        LOG.info(LOG_GY_PREFIX + " 000 runInternal(String,Boolean) Vars-userName = " + this.conf.getVar(ConfVars.GUYUE_USER));
+        LOG.info(LOG_GY_PREFIX + " 000 runInternal(String,Boolean) auth = " + this.conf.getVar(ConfVars.GUYUE_AUTHORIZATION_ENABLED));
 
         errorMessage = null;
         SQLState = null;
@@ -1843,13 +1843,13 @@ public class Driver implements CommandProcessor {
                     return createProcessorResponse(ret);
                 }
 
-                LOG.info(LOG_GY_PREFIX + " \t 7-1 runInternal(String,boolean) MRYXBLG_EXEC_MODEL = " + HiveConf.getVar(
+                LOG.info(LOG_GY_PREFIX + " \t 7-1 runInternal(String,boolean) GUYUE_EXEC_MODEL = " + HiveConf.getVar(
                         this.conf,
-                        ConfVars.MRYXBLG_EXEC_MODEL));
+                        ConfVars.GUYUE_EXEC_MODEL));
             } else {
-                LOG.info(LOG_GY_PREFIX + " \t 7-2 runInternal(String,boolean) MRYXBLG_EXEC_MODEL = " + HiveConf.getVar(
+                LOG.info(LOG_GY_PREFIX + " \t 7-2 runInternal(String,boolean) GUYUE_EXEC_MODEL = " + HiveConf.getVar(
                         this.conf,
-                        ConfVars.MRYXBLG_EXEC_MODEL));
+                        ConfVars.GUYUE_EXEC_MODEL));
                 // reuse existing perf logger.
                 //
                 perfLogger = SessionState.getPerfLogger();
@@ -1863,7 +1863,7 @@ public class Driver implements CommandProcessor {
             //  1. hive-cli 模式下，执行 if分支.
             //  2. hiveServer2模式下，执行 '上面' else分支
             // 这样就能实现 explain 模式的所有功能.
-            if ("explain".equalsIgnoreCase(HiveConf.getVar(this.conf, ConfVars.MRYXBLG_EXEC_MODEL))) {
+            if ("explain".equalsIgnoreCase(HiveConf.getVar(this.conf, ConfVars.GUYUE_EXEC_MODEL))) {
                 driverState = DriverState.EXECUTED;
                 isFinishedWithError = false;
                 return createProcessorResponse(0);
@@ -2698,12 +2698,12 @@ public class Driver implements CommandProcessor {
         }
 
         LOG.info(LOG_GY_PREFIX + " \t getResults(List res) ---------------------------------------------------------->>>>>>>>>> 111");
-        LOG.info(LOG_GY_PREFIX + " \t getResults(List res) exec.model = " + HiveConf.getVar(conf, ConfVars.MRYXBLG_EXEC_MODEL));
+        LOG.info(LOG_GY_PREFIX + " \t getResults(List res) exec.model = " + HiveConf.getVar(conf, ConfVars.GUYUE_EXEC_MODEL));
         LOG.info(LOG_GY_PREFIX + " \t getResults(List res) ---------------------------------------------------------->>>>>>>>>> 222");
-        /** 2018-05-28 by lipeng 处理 hive.mryxblg.exec.model=explain 并且 select * from a limit 10; 的情况 */
-        if ("explain".equalsIgnoreCase(HiveConf.getVar(conf, ConfVars.MRYXBLG_EXEC_MODEL))) {
-            LOG.info(LOG_GY_PREFIX + " \t getResults(List res) --------------------------->>>>>>>>>> 333 MRYXBLG_EXEC_MODEL_EXPLAIN_RESULT = " + this.conf.getVar(ConfVars.MRYXBLG_EXEC_MODEL_EXPLAIN_RESULT));
-            String result = this.conf.getVar(ConfVars.MRYXBLG_EXEC_MODEL_EXPLAIN_RESULT);
+        /** 2018-05-28 by lipeng 处理 hive.guyue.exec.model=explain 并且 select * from a limit 10; 的情况 */
+        if ("explain".equalsIgnoreCase(HiveConf.getVar(conf, ConfVars.GUYUE_EXEC_MODEL))) {
+            LOG.info(LOG_GY_PREFIX + " \t getResults(List res) --------------------------->>>>>>>>>> 333 GUYUE_EXEC_MODEL_EXPLAIN_RESULT = " + this.conf.getVar(ConfVars.GUYUE_EXEC_MODEL_EXPLAIN_RESULT));
+            String result = this.conf.getVar(ConfVars.GUYUE_EXEC_MODEL_EXPLAIN_RESULT);
             if (StringUtils.isEmpty(result)) {
                 return false;
             }
@@ -2715,7 +2715,7 @@ public class Driver implements CommandProcessor {
             res.add(new Object[]{result});
 
             // release resource
-            this.conf.setVar(ConfVars.MRYXBLG_EXEC_MODEL_EXPLAIN_RESULT, "");
+            this.conf.setVar(ConfVars.GUYUE_EXEC_MODEL_EXPLAIN_RESULT, "");
             return true;
         }
 

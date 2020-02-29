@@ -428,53 +428,53 @@ public class HiveConf extends Configuration {
      */
     public enum ConfVars {
 
-        // MRYX Properties
+        // guyue Properties
         //用户名
-        MRYXBLG_USER("hive.mryxblg.username", "", "blg username"),
+        GUYUE_USER("hive.guyue.username", "", "blg username"),
 
         //密码
-        MRYXBLG_PASSWORD("hive.mryxblg.password", "", "blg password"),
+        GUYUE_PASSWORD("hive.guyue.password", "", "blg password"),
 
         //权限认证数据库地址
-        MRYXBLG_HIVESERVER_URL("hive.mryxblg.hiveserver.url", "", "auth db url"),
+        GUYUE_HIVESERVER_URL("hive.guyue.hiveserver.url", "", "auth db url"),
 
         //权限认证数据库用户名
-        MRYXBLG_HIVESERVER_USER("hive.mryxblg.hiveserver.username", "", "username for auth db"),
+        GUYUE_HIVESERVER_USER("hive.guyue.hiveserver.username", "", "username for auth db"),
 
         //权限认证数据库密码
-        MRYXBLG_HIVESERVER_PASSWORD("hive.mryxblg.hiveserver.password", "", "password for auth db"),
+        GUYUE_HIVESERVER_PASSWORD("hive.guyue.hiveserver.password", "", "password for auth db"),
 
         // 执行模式
-        MRYXBLG_EXEC_MODEL("hive.mryxblg.exec.model", "run", "exec model ['run' or 'explain']"),
+        GUYUE_EXEC_MODEL("hive.guyue.exec.model", "run", "exec model ['run' or 'explain']"),
 
         // 执行日志开关
-        MRYXBLG_EXEC_LOG_SWTICH("hive.mryxblg.exec.log.switch", false, " [true or false]"),
+        GUYUE_EXEC_LOG_SWTICH("hive.guyue.exec.log.switch", false, " [true or false]"),
 
         // explain 模式下的 结果
-        MRYXBLG_EXEC_MODEL_EXPLAIN_RESULT("hive.mryxblg.exec.explain.result", "", "json formatted result like '{a:b}'"),
+        GUYUE_EXEC_MODEL_EXPLAIN_RESULT("hive.guyue.exec.explain.result", "", "json formatted result like '{a:b}'"),
 
         // 是否启用 自定义权限检查
-        MRYXBLG_AUTHORIZATION_ENABLED("hive.mryxblg.authorization.enabled", false, " [true or false]"),
+        GUYUE_AUTHORIZATION_ENABLED("hive.guyue.authorization.enabled", false, " [true or false]"),
 
         // 是否启用 权限代理用户
-        MRYXBLG_AUTHORIZATION_USER_PROXY("hive.mryxblg.authorization.user.proxy", "", " agent for testing authorization "),
+        GUYUE_AUTHORIZATION_USER_PROXY("hive.guyue.authorization.user.proxy", "", " agent for testing authorization "),
 
         // 是否开启命令 监控
-        MRYXBLG_COMMAND_MONITORING("hive.mryxblg.command.monitoring", false, " [true or false]"),
+        GUYUE_COMMAND_MONITORING("hive.guyue.command.monitoring", false, " [true or false]"),
 
 
 
         //保留
-        MRYXBLG_RESERVE_A("hive.mryxblg.resrver.a", "", "reserved field a"),
+        GUYUE_RESERVE_A("hive.guyue.resrver.a", "", "reserved field a"),
 
         //保留
-        MRYXBLG_RESERVE_B("hive.mryxblg.resrver.b", "", "reserved field b"),
+        GUYUE_RESERVE_B("hive.guyue.resrver.b", "", "reserved field b"),
 
         //保留
-        MRYXBLG_RESERVE_C("hive.mryxblg.resrver.c", "", "reserved field c"),
+        GUYUE_RESERVE_C("hive.guyue.resrver.c", "", "reserved field c"),
 
         //保留
-        MRYXBLG_RESERVE_D("hive.mryxblg.resrver.d", "", "reserved field d"),
+        GUYUE_RESERVE_D("hive.guyue.resrver.d", "", "reserved field d"),
 
         // QL execution stuff
         SCRIPTWRAPPER("hive.exec.script.wrapper", null, ""),

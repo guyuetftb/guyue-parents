@@ -95,7 +95,7 @@ public class CliDriver {
     static final         String LOG_GY_PREFIX          = " MY_TEST .... ";
     static final         String LOG_GY_BEGIN           = " Beginninggggggggggg ";
     static final         String LOG_GY_END             = " Endingggggggggggggg ";
-    private static final Logger MRYXBLG_COMMAND_LOGGER = LoggerFactory.getLogger("MRYXBLG_COMMAND_LOGGER");
+    private static final Logger GUYUE_COMMAND_LOGGER = LoggerFactory.getLogger("GUYUE_COMMAND_LOGGER");
 
     public static       String prompt                        = null;
     public static       String prompt2                       = null; // when ';' is not yet seen. 当一直没有遇到 "(分号);"时使用
@@ -304,7 +304,7 @@ public class CliDriver {
                         // 结果缓冲区, 每次读取一定数量的日志, 然后输出.
                         ArrayList<Object> res = new ArrayList<Object>();
 
-                        if ("run".equalsIgnoreCase(HiveConf.getVar(conf, ConfVars.MRYXBLG_EXEC_MODEL))) {
+                        if ("run".equalsIgnoreCase(HiveConf.getVar(conf, ConfVars.GUYUE_EXEC_MODEL))) {
                             LOG.info(LOG_GY_PREFIX + " \t 1-6 processLocalCmd(String,CommandProcessor,CliSessionState) Driver.run exec.model = run ");
                             printHeader(qp, out);
                         } else {
@@ -319,15 +319,15 @@ public class CliDriver {
                                 ((FetchConverter) out).fetchStarted();
                             }
                             while (qp.getResults(res)) {
-                                if ("run".equalsIgnoreCase(HiveConf.getVar(conf, ConfVars.MRYXBLG_EXEC_MODEL))) {
+                                if ("run".equalsIgnoreCase(HiveConf.getVar(conf, ConfVars.GUYUE_EXEC_MODEL))) {
 
-                                    // mryxblg.exec.model=run
+                                    // guyue.exec.model=run
                                     for (Object r : res) {
                                         out.println("run    " + " \t " + (String) r);
                                     }
                                 } else {
 
-                                    // mryxblg.exec.model=explain
+                                    // guyue.exec.model=explain
                                     // 2018-07-09   can't print Object[] directly.
                                     // explain          [Ljava.lang.Object;@1e5aacd9
                                     out.println("explain" + " \t " + ((Object[]) res.get(0))[0]);
@@ -413,12 +413,12 @@ public class CliDriver {
         /**
          * 2018-05-28 by lipeng
          * 处理:
-         * hive.mryxblg.exec.model=explain
+         * hive.guyue.exec.model=explain
          * 并且
          * select * from a limit 10
          * 的情况
          */
-        if ("explain".equalsIgnoreCase(HiveConf.getVar(conf, ConfVars.MRYXBLG_EXEC_MODEL))) {
+        if ("explain".equalsIgnoreCase(HiveConf.getVar(conf, ConfVars.GUYUE_EXEC_MODEL))) {
             return;
         }
 

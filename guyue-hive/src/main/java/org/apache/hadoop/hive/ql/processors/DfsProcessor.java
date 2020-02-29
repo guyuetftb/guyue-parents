@@ -108,7 +108,7 @@ public class DfsProcessor implements CommandProcessor {
             if ("-rm".equals(commandTrim) || "-rmr".equals(commandTrim) || "-mv".equals(commandTrim) || "-rmdir".equals(commandTrim)) {
                 ret = 403;
                 console.printError("Command " + command + " failed with exit code = " + ret);
-                console.printError("MryxBlg Authorization failed: Pemission denied. Please contact blg-team-dataman@missfresh.cn for your information.");
+                console.printError("Guyue Authorization failed: Pemission denied. Please contact blg-team-dataman@guyuecn for your information.");
             } else {
                 ret = dfs.run(tokens);
                 if (ret != 0) {

@@ -1,11 +1,11 @@
-package cn.missfresh
+package cn.guyue
 
 import java.sql.{Connection, DriverManager, ResultSet, Statement}
 import java.text.SimpleDateFormat
 import java.util
 import java.util.Date
 
-import cn.missfresh.utils._
+import cn.guyueutils._
 import org.apache.hadoop.hbase.client.{Put, _}
 import org.apache.hadoop.hbase.io.ImmutableBytesWritable
 import org.apache.hadoop.hbase.mapred.TableOutputFormat
@@ -169,7 +169,7 @@ object Data2Hbase {
     //将映射关系广播（列->列族）
     val clmsMapBT = sc.broadcast(MatchUpTools.cln2Family)
     for (f <- 0 to 9) {
-      val userVisitInfo: DataFrame = session.sql(s"""select * from bi_app_mryx_crm.tmp_da_log_visit_profile_info where user_id like '%${f}'""".stripMargin)
+      val userVisitInfo: DataFrame = session.sql(s"""select * from bi_app_guyue_crm.tmp_da_log_visit_profile_info where user_id like '%${f}'""".stripMargin)
 
       println(s"UserTagByUserInfo-userInfo2Hbase|sql循环取数|循环次数${f}")
       val columns: Array[String] = userVisitInfo.columns
@@ -211,7 +211,7 @@ object Data2Hbase {
           s"""
              					   |select
              					   |*
-             					   |from bi_app_mryx_crm.tmp_da_log_user_profile_info
+             					   |from bi_app_guyue_crm.tmp_da_log_user_profile_info
              					   |where (one_day_visit_num is null  or two_day_visit_num is null
              					   |or three_day_visit_num is null or five_day_visit_num is null
              					   |or one_week_visit_num  is null or two_week_visit_num is null

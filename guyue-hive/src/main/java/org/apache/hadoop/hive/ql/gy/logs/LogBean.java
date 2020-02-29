@@ -52,14 +52,14 @@ public class LogBean {
     @SerializedName("last_command")
     private String lastCommand;
 
-    @SerializedName("mryxblg_exec_model")
-    private String mryxblgExecModel;
+    @SerializedName("guyue_exec_model")
+    private String guyueExecModel;
 
-    @SerializedName("mryxblg_authorization_enabled")
-    private String mryxblgAuthorizationEnabled;
+    @SerializedName("guyue_authorization_enabled")
+    private String guyueAuthorizationEnabled;
 
-    @SerializedName("mryxblg_command_monitoring")
-    private String mryxblgCommandMonitoring;
+    @SerializedName("guyue_command_monitoring")
+    private String guyueCommandMonitoring;
 
     public String getApplicationId() {
         return applicationId;
@@ -181,28 +181,28 @@ public class LogBean {
         this.lastCommand = lastCommand;
     }
 
-    public String getMryxblgExecModel() {
-        return mryxblgExecModel;
+    public String getGuyueExecModel() {
+        return guyueExecModel;
     }
 
-    public void setMryxblgExecModel(String mryxblgExecModel) {
-        this.mryxblgExecModel = mryxblgExecModel;
+    public void setGuyueExecModel(String guyueExecModel) {
+        this.guyueExecModel = guyueExecModel;
     }
 
-    public String getMryxblgAuthorizationEnabled() {
-        return mryxblgAuthorizationEnabled;
+    public String getGuyueAuthorizationEnabled() {
+        return guyueAuthorizationEnabled;
     }
 
-    public void setMryxblgAuthorizationEnabled(String mryxblgAuthorizationEnabled) {
-        this.mryxblgAuthorizationEnabled = mryxblgAuthorizationEnabled;
+    public void setGuyueAuthorizationEnabled(String guyueAuthorizationEnabled) {
+        this.guyueAuthorizationEnabled = guyueAuthorizationEnabled;
     }
 
-    public String getMryxblgCommandMonitoring() {
-        return mryxblgCommandMonitoring;
+    public String getGuyueCommandMonitoring() {
+        return guyueCommandMonitoring;
     }
 
-    public void setMryxblgCommandMonitoring(String mryxblgCommandMonitoring) {
-        this.mryxblgCommandMonitoring = mryxblgCommandMonitoring;
+    public void setGuyueCommandMonitoring(String guyueCommandMonitoring) {
+        this.guyueCommandMonitoring = guyueCommandMonitoring;
     }
 
     public String getLoggerType() {

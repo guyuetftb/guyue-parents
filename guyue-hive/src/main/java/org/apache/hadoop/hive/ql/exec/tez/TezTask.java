@@ -565,7 +565,7 @@ public class TezTask extends Task<TezWork> {
                 LOG.info(LOG_GY_PREFIX
                                  + " \t submit(JobConf,DAG,Path,LocalResource,TezSessionState,List<LocalResource>,String[],Map<String, LocalResource>) will call submitDAG. ");
                 dagClient = sessionState.getSession().submitDAG(dag);
-                // LOG.info(LOG_GY_PREFIX + " \t submit(JobConf,DAG,Path,LocalResource,TezSessionState,List<LocalResource>,String[],Map<String, LocalResource>) GuYue-applicationId = " + dag.getDagConf().get("hive.mryxblg.application.id"));
+                // LOG.info(LOG_GY_PREFIX + " \t submit(JobConf,DAG,Path,LocalResource,TezSessionState,List<LocalResource>,String[],Map<String, LocalResource>) GuYue-applicationId = " + dag.getDagConf().get("hive.guyue.application.id"));
             } catch (SessionNotRunning nr) {
                 console.printInfo("Tez session was closed. Reopening...");
 

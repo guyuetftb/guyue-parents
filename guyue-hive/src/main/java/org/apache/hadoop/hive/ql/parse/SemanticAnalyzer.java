@@ -12912,11 +12912,11 @@ public class SemanticAnalyzer extends BaseSemanticAnalyzer {
         // check for existence of table
         if (ifNotExists) {
             // TODO lipeng
-            // mryxblg.exec.model = explain
-            if ("explain".equalsIgnoreCase(this.conf.getVar(ConfVars.MRYXBLG_EXEC_MODEL))) {
+            // guyue.exec.model = explain
+            if ("explain".equalsIgnoreCase(this.conf.getVar(ConfVars.GUYUE_EXEC_MODEL))) {
                 LOG.info(LOG_GY_PREFIX + " \t 4-1 analyzeCreateTable(ASTNode, QB, PlannerContext) ");
             } else {
-                // mryxblg.exec.model = run
+                // guyue.exec.model = run
                 try {
                     Table table = getTable(qualifiedTabName, false);
                     LOG.info(LOG_GY_PREFIX + " \t 4-2 analyzeCreateTable(ASTNode, QB, PlannerContext) table = " + table);
