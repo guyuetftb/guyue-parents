@@ -85,7 +85,7 @@
         <guava.version>11.0.2</guava.version>
 
         <!-- Hive -->
-        <hive.version>2.2.0</hive.version>
+        <hive.version>3.1.2</hive.version>
 
         <!-- Spark -->
         <spark.version>2.1.1</spark.version>
