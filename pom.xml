@@ -33,7 +33,9 @@
 		<module>guyue-java18-source</module>
 		<module>guyue-datastructure</module>
 		<module>guyue-designpattern</module>
-	</modules>
+		<module>guyue-jianzhi-offer</module>
+        <module>guyue-algorithm</module>
+    </modules>
 
     <properties>
 

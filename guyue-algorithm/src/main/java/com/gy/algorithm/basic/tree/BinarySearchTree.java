@@ -1,4 +1,4 @@
-package com.gy.datastructure.tree;
+package com.gy.algorithm.basic.tree;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -12,7 +12,7 @@ import java.util.Stack;
  */
 public class BinarySearchTree<E extends Comparable<E>> {
 
-	private class Node {
+	public class Node {
 
 		private E e;
 		private Node left;
@@ -227,9 +227,9 @@ public class BinarySearchTree<E extends Comparable<E>> {
 		// 非递归调用: 树的层序遍历, 或者广度遍历.
 		// 层序遍历需要借助 Queue 数据结构.
 		// 特别说明:
-		// 1. 层序遍历, 是每层遍历, 先把当前节点放入栈中.
-		// 2. 再把当前节点 左子树 放入Queue中, 再把当前节点的右节点放到Queue中.
-		// 3. 在进入下次循环时, 从队列头部, 取出元素, 先放入的元素先出队，如图:
+		// 1. 层序遍历, 是每层遍历, 先把当前节点放入Queue中.
+		// 2. 再把当前节点 left-child 放入Queue中, 再把当前节点的 right-child 放到Queue中.
+		// 3. 在进入下次循环时, 从队列头部head, 取出元素, 先放入的元素先出队，如图:
 		// 			root
 		// 		B		C
 		// 	  D   E   F	   G
@@ -328,6 +328,9 @@ public class BinarySearchTree<E extends Comparable<E>> {
 		return res.toString();
 	}
 
+	public Node getRoot() {
+		return root;
+	}
 
 	public static void main(String[] args) {
 		BinarySearchTree<Integer> tree = new BinarySearchTree<>();
