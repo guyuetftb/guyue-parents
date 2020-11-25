@@ -26,11 +26,7 @@
         <module>guyue-nlp</module>
         <module>guyue-hive-source</module>
         <module>guyue-web</module>
-        <!--
-        <module>guyue-otter</module>
-        -->
         <module>guyue-elasticsearch</module>
-		<module>guyue-jianzhi-offer</module>
     </modules>
 
     <properties>
