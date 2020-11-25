@@ -1,8 +1,0 @@
-1. leetCode 208问题.
-  这个问题与 Trie 中实现的几个操作与方法完全一致,
-
-2. leetCode 211问题，添加搜索单词.
-
-3. LeetCode 677问题, Map sum pairs.
-
-

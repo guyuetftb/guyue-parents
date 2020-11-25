@@ -30,11 +30,7 @@
         <module>guyue-otter</module>
         -->
         <module>guyue-elasticsearch</module>
-		<module>guyue-java18-source</module>
-		<module>guyue-datastructure</module>
-		<module>guyue-designpattern</module>
 		<module>guyue-jianzhi-offer</module>
-        <module>guyue-algorithm</module>
     </modules>
 
     <properties>
@@ -119,7 +115,6 @@
         <finalName>guyue-parent</finalName>
         <pluginManagement>
             <plugins>
-
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-dependency-plugin</artifactId>
