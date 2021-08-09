@@ -13,7 +13,7 @@
 
 
     <properties>
-        <es.version>6.5.4</es.version>
+        <es.version>6.8.17</es.version>
         <httpclient.version>4.5.2</httpclient.version>
     </properties>
 
