@@ -55,7 +55,7 @@
 
 
         <!-- HADOOP 2.7.5 -->
-        <hadoop.version>2.7.5</hadoop.version>
+        <hadoop.version>3.2.3</hadoop.version>
 
         <!-- HADOOP 2.7.5 Commons Lib -->
         <avro.version>1.7.4</avro.version>
