@@ -47,7 +47,7 @@
 
         <!-- Junit -->
         <junit.version>4.11</junit.version>
-        <jackson.version>2.6.5</jackson.version>
+        <jackson.version>2.12.6.1</jackson.version>
 
         <!-- HBASE -->
         <hbase.version>1.2.6</hbase.version>
