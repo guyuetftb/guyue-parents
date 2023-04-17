@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="guyue-java18-source" />
+        <module name="guyue-jianzhi-offer" />
+        <module name="guyue-algorithm" />
+        <module name="guyue-java" />
+        <module name="guyue-scala" />
+        <module name="guyue-elasticsearch" />
+        <module name="guyue-java11" />
+        <module name="guyue-nlp" />
+        <module name="guyue-web" />
+        <module name="guyue-kafka" />
+        <module name="guyue-flume" />
+        <module name="guyue-hive-source" />
+        <module name="guyue-spark" />
+        <module name="guyue-common" />
+        <module name="guyue-avro" />
+        <module name="guyue-hbase" />
+        <module name="guyue-datastructure" />
+        <module name="guyue-java8" />
+        <module name="guyue-hive" />
+        <module name="guyue-designpattern" />
+        <module name="guyue-hadoop" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>

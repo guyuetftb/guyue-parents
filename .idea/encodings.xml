@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/guyue-algorithm/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/guyue-algorithm/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/guyue-avro/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/guyue-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/guyue-common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/guyue-datastructure/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/guyue-datastructure/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/guyue-designpattern/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/guyue-designpattern/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/guyue-elasticsearch/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/guyue-elasticsearch/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/guyue-flume/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/guyue-flume/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/guyue-hadoop/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/guyue-hadoop/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/guyue-hbase/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/guyue-hbase/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/guyue-hive-source/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/guyue-hive-source/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/guyue-hive/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/guyue-hive/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/guyue-java/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/guyue-java/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/guyue-java11/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/guyue-java11/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/guyue-java18-source/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/guyue-java18-source/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/guyue-java8/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/guyue-java8/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/guyue-jianzhi-offer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/guyue-jianzhi-offer/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/guyue-kafka/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/guyue-kafka/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/guyue-nlp/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/guyue-nlp/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/guyue-scala/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/guyue-scala/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/guyue-spark/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/guyue-spark/src/main/scala" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/guyue-web/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/guyue-web/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+  </component>
+</project>
