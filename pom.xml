@@ -35,6 +35,8 @@
 		<module>guyue-designpattern</module>
 		<module>guyue-jianzhi-offer</module>
         <module>guyue-algorithm</module>
+        <module>guyue-java8</module>
+        <module>guyue-java11</module>
     </modules>
 
     <properties>
