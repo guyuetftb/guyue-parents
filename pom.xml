@@ -26,10 +26,8 @@
         <module>guyue-nlp</module>
         <module>guyue-hive-source</module>
         <module>guyue-web</module>
-        <!--
-        <module>guyue-otter</module>
-        -->
         <module>guyue-elasticsearch</module>
+<<<<<<< HEAD
 		<module>guyue-java18-source</module>
 		<module>guyue-datastructure</module>
 		<module>guyue-designpattern</module>
@@ -37,6 +35,8 @@
         <module>guyue-algorithm</module>
         <module>guyue-java8</module>
         <module>guyue-java11</module>
+=======
+>>>>>>> a0bca043804069cef66718417b920864133c5f54
     </modules>
 
     <properties>
@@ -121,7 +121,6 @@
         <finalName>guyue-parent</finalName>
         <pluginManagement>
             <plugins>
-
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-dependency-plugin</artifactId>
