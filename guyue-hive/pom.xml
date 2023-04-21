@@ -22,6 +22,18 @@
 
     <dependencies>
 
+        <dependency>
+            <groupId>org.apache.calcite</groupId>
+            <artifactId>calcite-core</artifactId>
+            <version>1.10.0</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.pentaho</groupId>
+                    <artifactId>pentaho-aggdesigner</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
         <!-- Myself Jar -->
         <dependency>
             <groupId>com.guyue.tftb</groupId>

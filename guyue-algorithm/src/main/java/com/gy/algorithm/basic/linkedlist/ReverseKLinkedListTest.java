@@ -99,7 +99,7 @@ public class ReverseKLinkedListTest {
 		}
 
 
-		public LinkedNode reverse(LinkedNode head) {
+		private LinkedNode reverse(LinkedNode head) {
 			// TODO 1 -> 2 -> 3 -> 4 -> 5
 			// 		把整个链表反转, 但是 preHead不反转
 			LinkedNode cur = head;

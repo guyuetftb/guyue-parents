@@ -26,7 +26,6 @@
         <module>guyue-nlp</module>
         <module>guyue-hive-source</module>
         <module>guyue-web</module>
-        <module>guyue-elasticsearch</module>
 		<module>guyue-java18-source</module>
 		<module>guyue-datastructure</module>
 		<module>guyue-designpattern</module>
