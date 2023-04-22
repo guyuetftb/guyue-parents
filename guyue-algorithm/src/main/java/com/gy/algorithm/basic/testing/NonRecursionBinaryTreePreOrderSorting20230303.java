@@ -1,6 +1,6 @@
 package com.gy.algorithm.basic.testing;
 
-import com.gy.algorithm.basic.common.TreeNode;
+import com.gy.algorithm.basic.tree.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,12 +33,12 @@ public class NonRecursionBinaryTreePreOrderSorting20230303 {
             // left 状态
             if (leftState == tempState) {
                 // preOrder
-                result.add(currentNode.val);
-                if (currentNode.left != null) {
+                result.add((Integer) currentNode.getValue());
+                if (currentNode.getLeft() != null) {
                     // 有左子树, 当前节点进Stack
                     stack.push(currentNode);
                     // 遍历左子树
-                    currentNode = currentNode.left;
+                    currentNode = currentNode.getLeft();
                 } else {
                     // 没有左子树, 切换为 right 状态.
                     tempState = rightState;
@@ -47,11 +47,11 @@ public class NonRecursionBinaryTreePreOrderSorting20230303 {
             // right 状态
             else if (rightState == tempState) {
                 // inOrder
-                if (currentNode.right != null) {
+                if (currentNode.getRight() != null) {
                     // 保存当前节点
                     stack.push(currentNode);
                     // 遍历当前节点的左子树
-                    currentNode = currentNode.right;
+                    currentNode = currentNode.getRight();
                     // 切换临时状态
                     tempState = leftState;
                 } else {
@@ -71,7 +71,7 @@ public class NonRecursionBinaryTreePreOrderSorting20230303 {
                     //注意: 这里判断不对， 需要判断 parent.left 是否等于 currentNode,
                     // 等于就说明是从 left 上来的.
                     // 不等于就说明是从 right 上来的.
-                    if (parent.left == currentNode) {
+                    if (parent.getLeft() == currentNode) {
                         // 左子树返回, 状态切为rightState
                         tempState = rightState;
                     } else {

@@ -23,13 +23,13 @@ public class ReverseLinkedListTest {
         list1.add(10);
 
         for (int i = 0; i < list1.size; i++) {
-            System.out.println(list1.get(i).getE());
+            System.out.println(list1.get(i).getValue());
         }
 
         System.out.println("Swap Two linked Node ----------------------");
         list1.reverse();
         for (int i = 0; i < list1.size; i++) {
-            System.out.println(list1.get(i).getE());
+            System.out.println(list1.get(i).getValue());
         }
 
     }

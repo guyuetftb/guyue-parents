@@ -8,20 +8,24 @@ package com.gy.algorithm.basic.linkedlist;
  */
 public class LinkedNode<E> {
 
-	public E e;
-	public LinkedNode next;
+    public E e;
+    public LinkedNode next;
 
-	public LinkedNode() {
-		this.e = null;
-		this.next = null;
-	}
+    public LinkedNode() {
+        this.e = null;
+        this.next = null;
+    }
 
-	public LinkedNode(E e, LinkedNode nextNode) {
-		this.e = e;
-		this.next = nextNode;
-	}
+    public LinkedNode(E e, LinkedNode nextNode) {
+        this.e = e;
+        this.next = nextNode;
+    }
 
-	public E getE() {
-		return e;
-	}
+    public E getValue() {
+        return e;
+    }
+
+    public LinkedNode getNext() {
+        return next;
+    }
 }

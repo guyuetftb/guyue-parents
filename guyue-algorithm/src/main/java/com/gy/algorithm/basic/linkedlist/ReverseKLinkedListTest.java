@@ -23,13 +23,13 @@ public class ReverseKLinkedListTest {
 		list1.add(10);
 
 		for (int i = 0; i < list1.size; i++) {
-			System.out.println(list1.get(i).getE());
+			System.out.println(list1.get(i).getValue());
 		}
 
 		System.out.println("Swap K Node ----------------------");
 		list1.reverseK(4);
 		for (int i = 0; i < list1.size; i++) {
-			System.out.println(list1.get(i).getE());
+			System.out.println(list1.get(i).getValue());
 		}
 	}
 
