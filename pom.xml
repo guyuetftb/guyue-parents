@@ -183,7 +183,7 @@
                         <sourceDir>src/main/scala</sourceDir>
                         <sourceDir>src/main/java</sourceDir>
                         <testSourceDir>src/test/scala</testSourceDir>
-                        <scalaVersion>2.11.7</scalaVersion>
+                        <scalaVersion>2.12.10</scalaVersion>
                     </configuration>
                 </plugin>
             </plugins>
