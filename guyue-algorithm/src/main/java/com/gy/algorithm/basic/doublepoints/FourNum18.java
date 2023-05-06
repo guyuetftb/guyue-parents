@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * 这个类没有调度通过
+ */
 public class FourNum18 {
 
     public static void main(String[] args) {
