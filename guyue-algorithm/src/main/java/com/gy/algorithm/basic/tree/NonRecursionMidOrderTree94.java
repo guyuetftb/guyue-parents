@@ -1,13 +1,16 @@
 package com.gy.algorithm.basic.tree;
 
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
-public class NonRecursionPostOrderTree {
+/**
+ * 2023-04-22
+ * --TAG: 吴师兄算法训练营
+ */
+public class NonRecursionMidOrderTree94 {
 
-    public List<Integer> postOrderTraversal(TreeNode root) {
+    public List<Integer> midOrderTraversal(TreeNode root) {
         // 二叉树节点 结果
         List result = new ArrayList();
 
@@ -36,7 +39,6 @@ public class NonRecursionPostOrderTree {
 
             // 遍历的过程中，始终去观察 currentNode的3种状态.
             if (currentNodeState == leftState) {
-
                 /**
                  leftState说明currentNode 左，右节点都没有遍历
                  需要去观察当前节点的 左 树子树.
@@ -51,6 +53,8 @@ public class NonRecursionPostOrderTree {
                     // 代码执行到 Tag-1.
                 }
             } else if (currentNodeState == rightState) {
+                ///// midOrder 前序遍历
+                result.add(node.getValue());
                 /**
                  rightState说明currentNode 左子树遍历完成，需要遍历右子树.
                  */
@@ -67,9 +71,6 @@ public class NonRecursionPostOrderTree {
                     currentNodeState = upState;
                 }
             } else if (currentNodeState == upState) {
-                ///// postOrder 前序遍历
-                result.add(node.getValue());
-
                 /**
                  返回当前Node父Node的位置, 通过栈顶元素来获取当前Node的父Node.
                  */

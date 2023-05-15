@@ -14,8 +14,8 @@
         <module name="guyue-java11" />
         <module name="guyue-nlp" />
         <module name="guyue-web" />
-        <module name="guyue-kafka" />
         <module name="guyue-flume" />
+        <module name="guyue-kafka" />
         <module name="guyue-hive-source" />
         <module name="guyue-spark" />
         <module name="guyue-common" />

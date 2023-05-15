@@ -4,9 +4,22 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
-public class NonRecursionMidOrderTree {
-
-    public List<Integer> midOrderTraversal(TreeNode root) {
+/**
+ * 2023-04-22
+ * --TAG: 吴师兄算法训练营
+ *
+ * 核心思想:
+ * 前序，中序，后序遍历的唯一区别是：什么时候把当前节点加入到 栈中去。
+ *
+ * 每个节点有3种状态(Status):
+ * up: 该节点的左，右节点都已经遍历，返回父节点。
+ * left: 该节点的左，右节点都没有遍历。
+ * right: 该节点的左节点已经遍历，右节点没有遍历。
+ *
+ *
+ */
+public class NonRecursionPreOrderTree144 {
+    public List<Integer> preorderTraversal(TreeNode root) {
         // 二叉树节点 结果
         List result = new ArrayList();
 
@@ -35,6 +48,9 @@ public class NonRecursionMidOrderTree {
 
             // 遍历的过程中，始终去观察 currentNode的3种状态.
             if (currentNodeState == leftState) {
+                ///// preOrder 前序遍历
+                result.add(node.getValue());
+
                 /**
                  leftState说明currentNode 左，右节点都没有遍历
                  需要去观察当前节点的 左 树子树.
@@ -49,8 +65,6 @@ public class NonRecursionMidOrderTree {
                     // 代码执行到 Tag-1.
                 }
             } else if (currentNodeState == rightState) {
-                ///// midOrder 前序遍历
-                result.add(node.getValue());
                 /**
                  rightState说明currentNode 左子树遍历完成，需要遍历右子树.
                  */

@@ -2,22 +2,22 @@ package com.gy.algorithm.basic.tree;
 
 public class TreeNode<E> {
 
-    private E e;
-    private TreeNode left;
-    private TreeNode right;
+    public E val;
+    public TreeNode left;
+    public TreeNode right;
 
     TreeNode(E e) {
-        this.e = e;
+        this.val = e;
         this.left = null;
         this.right = null;
     }
 
     public E getValue() {
-        return e;
+        return val;
     }
 
     public void setValue(E e) {
-        this.e = e;
+        this.val = e;
     }
 
     public TreeNode getLeft() {
