@@ -1,6 +1,51 @@
 package com.gy.algorithm.basic.linkedlist;
 
-public class ReverseLinkedList206 {
+import com.gy.algorithm.basic.common.ListNode;
+
+public class LC206ReverseLinkedList {
+
+    public static void main(String[] args) {
+        ListNode head = ListNode.buildListNode(new int[]{});
+        LC206ReverseLinkedList lc206ReverseLinkedList = new LC206ReverseLinkedList();
+        lc206ReverseLinkedList.reverseList(head);
+        head.show();
+    }
+
+    public ListNode reverseList(ListNode head) {
+        ListNode curNode = head;
+        ListNode preNode = null;
+
+        /**
+         * 1 --> 2 --> 3 --> 4 --> 5 --> null
+         */
+        while (curNode != null) {
+            /**
+             * 1. 暂存后继节点 cur.next
+             *  第一次为: 2
+             */
+            ListNode tmp = curNode.next;
+
+            /**
+             * 2. 修改 next 引用指向
+             *  第一次为: null
+             */
+            curNode.next = preNode;
+
+            /**
+             * 3. preNode 暂存 curNode
+             *  第一次为: preNode = 1
+             */
+            preNode = curNode;
+
+            /**
+             * 4. curNode 访问下一节点
+             *  第一次为: 2
+             */
+            curNode = tmp;
+        }
+
+        return preNode;
+    }
 
     /**
      * 本题采用递归的思想
@@ -8,7 +53,7 @@ public class ReverseLinkedList206 {
      * 2.   第1步: 反转以1为head节点链表
      * 3.   第2步: 反转以2为head节点的链表
      * 4.   第3步: 反转以3为head节点的链表
-     * ....
+     * <p>
      * <p>
      * <p>
      * 主体思想
@@ -16,11 +61,8 @@ public class ReverseLinkedList206 {
      * 2. head节点为null, 或者 head.next = null，退出循环
      * 3. 反转 尾部节点的next 值
      * 4. 返回当前节点
-     *
-     * @param head
-     * @return
      */
-    public ListNode reverseList(ListNode head) {
+    public ListNode reverseListBak(ListNode head) {
         if (head == null || head.next == null) {
             // 链表: 1 --> 2 --> 3 --> 4 --> 5 --> null
             // 第一次执行到此: 是node = 5，node.next = null，返回5.

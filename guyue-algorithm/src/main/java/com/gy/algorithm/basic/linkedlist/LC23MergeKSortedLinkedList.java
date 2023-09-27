@@ -1,6 +1,12 @@
 package com.gy.algorithm.basic.linkedlist;
 
-public class MergeKSortedLinkedList23 {
+import com.gy.algorithm.basic.common.ListNode;
+
+/**
+ * https://leetcode.cn/problems/merge-k-sorted-lists/
+ * 23. 合并 K 个升序链表
+ */
+public class LC23MergeKSortedLinkedList {
 
     public static void main(String[] args) {
 

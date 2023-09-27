@@ -1,6 +1,8 @@
 package com.gy.algorithm.basic.linkedlist;
 
-public class RemoveDuplicatesFromSortedLinkedListII82Iteration {
+import com.gy.algorithm.basic.common.ListNode;
+
+public class LC82RemoveDuplicatesFromSortedLinkedListIIIteration {
 
     public static void main(String[] args) {
 

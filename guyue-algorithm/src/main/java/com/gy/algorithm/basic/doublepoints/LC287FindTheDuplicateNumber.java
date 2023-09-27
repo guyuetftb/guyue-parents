@@ -1,6 +1,6 @@
 package com.gy.algorithm.basic.doublepoints;
 
-public class FindTheDuplicateNumber287 {
+public class LC287FindTheDuplicateNumber {
 
     public static void main(String[] args) {
 

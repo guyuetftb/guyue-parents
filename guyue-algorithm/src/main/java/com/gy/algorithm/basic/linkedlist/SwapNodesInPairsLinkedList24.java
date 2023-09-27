@@ -1,5 +1,7 @@
 package com.gy.algorithm.basic.linkedlist;
 
+import com.gy.algorithm.basic.common.ListNode;
+
 public class SwapNodesInPairsLinkedList24 {
 
     public static void main(String[] args) {

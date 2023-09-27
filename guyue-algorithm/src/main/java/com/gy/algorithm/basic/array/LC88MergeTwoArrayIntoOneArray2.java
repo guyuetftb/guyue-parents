@@ -6,7 +6,7 @@ package com.gy.algorithm.basic.array;
  * @Author lipeng
  * @Date 2020-05-27 17:14
  */
-public class ArrayMergeTwoArrIntoOneArrTest {
+public class LC88MergeTwoArrayIntoOneArray2 {
 
 	public static void main(String[] args) {
 

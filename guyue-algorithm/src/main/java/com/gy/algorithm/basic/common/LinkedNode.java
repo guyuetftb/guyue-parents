@@ -1,4 +1,4 @@
-package com.gy.algorithm.basic.linkedlist;
+package com.gy.algorithm.basic.common;
 
 /**
  * @ClassName LinkedNode

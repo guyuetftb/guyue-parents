@@ -1,5 +1,7 @@
 package com.gy.algorithm.basic.linkedlist;
 
+import com.gy.algorithm.basic.common.LinkedNode;
+
 /**
  * @ClassName SwapLinkedListTwoNodeTest
  * @Description TOOD
