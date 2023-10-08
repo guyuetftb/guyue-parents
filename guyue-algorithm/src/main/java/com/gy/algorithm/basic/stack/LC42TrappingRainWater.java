@@ -2,12 +2,12 @@ package com.gy.algorithm.basic.stack;
 
 import java.util.Stack;
 
-public class TrappingRainWater42 {
+public class LC42TrappingRainWater {
 
     public static void main(String[] args) {
 
-        TrappingRainWater42 trappingRainWater42 = new TrappingRainWater42();
-        trappingRainWater42.trap(new int[]{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1});
+        LC42TrappingRainWater LC42TrappingRainWater = new LC42TrappingRainWater();
+        LC42TrappingRainWater.trap(new int[]{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1});
     }
 
 

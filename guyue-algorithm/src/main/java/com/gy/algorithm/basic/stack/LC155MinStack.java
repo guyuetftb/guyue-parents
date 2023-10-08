@@ -2,7 +2,7 @@ package com.gy.algorithm.basic.stack;
 
 import java.util.Stack;
 
-public class MinStack155 {
+public class LC155MinStack {
 
     Stack<Integer> stack;
     Stack<Integer> minStack;
@@ -13,7 +13,7 @@ public class MinStack155 {
         // 当栈中元素，出栈时, 辅助栈的元素与 当前栈中的元素相同, 辅助栈元素也出栈
     }
 
-    public MinStack155() {
+    public LC155MinStack() {
         stack = new Stack<>();
         minStack = new Stack<>();
     }

@@ -2,7 +2,7 @@ package com.gy.algorithm.basic.stack;
 
 import java.util.Stack;
 
-public class ValidParentheses20 {
+public class LC20ValidParentheses {
     public static void main(String[] args) {
 
     }

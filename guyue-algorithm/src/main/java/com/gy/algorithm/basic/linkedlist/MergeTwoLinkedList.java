@@ -1,7 +1,5 @@
 package com.gy.algorithm.basic.linkedlist;
 
-import com.sun.xml.internal.bind.v2.TODO;
-
 import java.util.LinkedList;
 
 /**
