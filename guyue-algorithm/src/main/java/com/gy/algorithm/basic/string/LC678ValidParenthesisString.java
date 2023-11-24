@@ -12,7 +12,8 @@ public class LC678ValidParenthesisString {
     }
 
     /**
-     * 括号匹配问题的经典解法
+     * 括号匹配问题的经典解法:
+     * <p>
      * 1. 栈存放的是索引
      * 一栈存左括号，一栈存星号
      * <p>

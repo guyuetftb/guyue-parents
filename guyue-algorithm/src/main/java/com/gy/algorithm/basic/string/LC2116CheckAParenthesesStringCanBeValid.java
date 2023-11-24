@@ -23,7 +23,8 @@ public class LC2116CheckAParenthesesStringCanBeValid {
         String str = "))()))";
         String locked = "010100";
         LC2116CheckAParenthesesStringCanBeValid lc2116CheckAParenthesesStringCanBeValid = new LC2116CheckAParenthesesStringCanBeValid();
-        lc2116CheckAParenthesesStringCanBeValid.canBeValid(str, locked);
+        boolean b = lc2116CheckAParenthesesStringCanBeValid.canBeValid(str, locked);
+        System.out.println(b);
     }
 
     /**

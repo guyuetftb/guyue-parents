@@ -62,6 +62,7 @@ public class LC13RomanToInteger {
 
 
         int resultSum = 0;
+        // 初始第1个值, 通过不断的比较 curNum 与 preNum, 决定进行 加操作, 减操作
         int preNum = map.get(s.charAt(0) + "");
         for (int index = 1; index < s.length(); index++) {
 

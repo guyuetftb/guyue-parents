@@ -19,7 +19,7 @@ public class LC41FirstMissingPositive {
         int len = nums.length + 1;
         byte[] arr = new byte[len];
         for (int num : nums) {
-            // 如果存在某个正数, 将该位置设置为1
+            // 如果存在某个正数 且 数据 小于 数组长度 将该位置设置为1
             if (num > 0 && num < len) {
                 arr[num - 1] = 1;
             }

@@ -1,5 +1,4 @@
 package com.gy.algorithm.basic.array;
-
 /**
  * 724. 寻找数组的中心下标
  * https://leetcode.cn/problems/find-pivot-index/
