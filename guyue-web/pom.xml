@@ -15,7 +15,7 @@
 
 
     <properties>
-        <jetty_verion>8.1.7.v20120910</jetty_verion>
+        <jetty_verion>9.4.48.v20220622</jetty_verion>
     </properties>
 
     <dependencies>
